@@ -17,7 +17,7 @@
 
 然后使用yum安装 mysql-server
 	
-	yum -y install mysql-community-server
+	yum -y install mysql-server
 
 这一步需要下载mysql，所以需要的时间比较长。
 
@@ -40,7 +40,7 @@
 
 看到active (running) 表示MySQL成功启动，第一次启动mysql的时候会，mysql的默认密码会打印在启动日志里面。使用下面命令查看密码
 
-	grep "password" /var/log/mysqld.log
+	cat /var/log/mysql/mysqld.log |grep password
 
 接下来使用默认密码登录
 	
